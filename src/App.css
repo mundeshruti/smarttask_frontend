@@ -1,0 +1,7 @@
+/* App-level polish is shared across task dashboard components. */
+.dashboard-panel {
+  border: 1px solid #e7ebf3;
+  border-radius: 18px;
+  background: rgba(255,255,255,.92);
+  box-shadow: 0 8px 28px rgba(25, 42, 86, .035);
+}
