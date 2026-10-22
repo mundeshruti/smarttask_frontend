@@ -1,7 +1,7 @@
 /* eslint-disable no-extra-boolean-cast */
 import { useEffect, useMemo, useState } from "react";
-import { Alert, Box, Chip, Container, Stack, Typography } from "@mui/material";
-import { AutoAwesome } from "@mui/icons-material";
+import { Alert, Box, Container, Stack, Typography } from "@mui/material";
+// import { AutoAwesome } from "@mui/icons-material";
 
 import Navbar from "./components/Navbar";
 import DashboardStats from "./components/DashboardStats";
@@ -249,7 +249,7 @@ function App() {
       <Navbar onAddTask={handleAddTask} />
 
       <Container maxWidth="lg" sx={{ py: 4 }}>
-        <Stack spacing={3}>
+        <Stack spacing={1}>
           <Stack
             direction={{ xs: "column", sm: "row" }}
             justifyContent="space-between"
@@ -257,26 +257,21 @@ function App() {
             spacing={2}
           >
             <Box>
-              <Typography
-                variant="h4"
-                fontWeight={800}
-                color="#172B4D"
-                gutterBottom
-              >
+              <Typography variant="h5" fontWeight={800} color="#172B4D" >
                 My Tasks
               </Typography>
 
-              <Typography color="text.secondary">
+              <Typography variant="body2" color="text.secondary">
                 Organize your work and make progress every day.
               </Typography>
             </Box>
 
-            <Chip
+            {/* <Chip
               icon={<AutoAwesome />}
               label="AI planning — Phase 3"
               color="primary"
               variant="outlined"
-            />
+            /> */}
           </Stack>
 
           {error && (
@@ -301,10 +296,6 @@ function App() {
           />
 
           <Box>
-            <Typography variant="h6" fontWeight={800} mb={2}>
-              Your task list
-            </Typography>
-
             <TaskList
               tasks={visibleTasks}
               loading={loading}
